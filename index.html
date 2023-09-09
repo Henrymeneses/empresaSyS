@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disdribuidora SyS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <header>        
+        <img id="imagenSuperior" src="./img/distruidora2.jpg" alt="">
+        <h2 id="usuarioActual" class="contenidoUsuario">Nombre Usuario:</h2>
+        
+        
+    </header>
+    
+    <div id="contenidoPrincipal" >
+        <div id="containerInicial">
+
+            <main>
+                <h1>BIENVENIDO AL MEJOR SISTEMA DE GESTION</h1>
+                <h1>Elija un opción</h1>
+                    <div id="botones">
+                        <button onclick="btnRegistrarUsuarioBlock(), btnRegistrarUsuarioNone();" type="button" id="registrarse" >Registrarse</button>
+                        <button onclick="btnIniciarSesionBlock(), btnRegistrarUsuarioNone();" type="button" id="inicioSesion">Iniciar Sesión</button>
+                    </div>
+                    
+            </main>
+
+        </div>
+        <div id="containerRegistrarse">
+
+            <main>
+        
+                <h1>REGISTRO DE USUARIOS</h1>
+                    <div id="registroUsuarios">
+                      <div id="inputsDelRegistro">
+                        <input placeholder="Usuario" type="text" id="nombreInput">
+                        <input placeholder="Contraseña" type="text" id="contraseñaInput" >
+                      </div>
+                      <div id="botonesDelRegistro">
+                  
+                        <button id="registrarUsuario" type="button" >Registrarse</button>
+                        <button onclick="btnSalirRegistrarseBlock(), btnSalirRegistrarseNone();" id="salirRegistrarse" type="button" >Salir</button>
+                      </div>
+                    </div>
+            </main>
+
+        </div>
+<br>
+<br>
+<br>
+<br>
+        <div id="containerUsuariosRegistrados">
+          <main id="informacionUsuarios">
+          
+            <h1>USUARIOS INGRESADOS</h1>
+            <div id="usuariosIngresados">
+                
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Usuario</th>
+                        <th>Contraseña</th>
+                        
+    
+                      </tr>
+                    </thead>
+                    
+                    <tbody id="tbodyUsuarios">
+                      
+                   
+                     
+                    </tbody>
+                    
+                  </table>
+            </div>
+    
+    
+            <button onclick="btnUsuariosRegistradosNone(), btnImagenFooterBlock(), btnContainerMenu1Block()" id="salirMostrarUsuarios" type="button">SALIR</button>
+          </main>
+        </div>
+        <div id="containerInicioSesion">
+
+            <main>
+        
+                <h1>INICIO DE SESION</h1>
+                    <div id="registroUsuarios">
+                        
+                        <input placeholder="Usuario" type="text" id="nombreInicioSesionInput">
+                        <input placeholder="Contraseña" type="text" id="contraseñaInicioSesionInput" >
+                      <div>
+                        <button onclick="" id="iniciarSesion" type="button" >Ingresar</button>
+                        <button onclick="btnSalirRegistrarseBlock(), btnIniciarSesionNone();" id="salirInicioSesion" type="button" >Salir</button>
+                      </div>
+                    </div>
+                    
+            </main>
+
+        </div>
+        <div id="containerMenu1">
+
+            <main>
+        
+                <h1>ELIJA UNA OPCION</h1>
+                    <div id="menu1">
+                        
+                        <button onclick="btnProductosBlock(), btnContainerMenu1None();" id="productos" type="button" >PRODUCTOS</button>
+                        <button onclick="btnClientesBlock(), btnContainerMenu1None();" id="clientes" type="button" >CLIENTES</button>
+                        <button onclick="btnProveedoresBlock(), btnContainerMenu1None();" id="proveedores" type="button">PROVEEDORES</button>
+                        <button onclick="btnUsuariosRegistradosBlock(), btnImagenFooterNone(), btnContainerMenu1None();" id="usuariosYaIngresados" type="button">USUARIOS</button>
+                        <button onclick="btnRegistroTotalBlock(),  btnImagenFooterNone(), btnContainerMenu1None()" id="registroTotal" type="button">REGISTRO</button>
+                        
+                    </div>
+                    <div id="salirMenu1">
+                    <button onclick="btnSalirRegistrarseBlock(), btnContainerMenu1None()" id="salir" type="button">SALIR</button>
+                    </div>
+            </main>
+
+        </div>
+        <div id="containerProductos">
+
+            <main>
+        
+                <h1>PRODUCTOS</h1>
+                    <div id="menu1">
+                        
+                        <button onclick="btnRegistrarProductoBlock(), btnImagenFooterNone(), btnProductosNone()" id="productosRegistrar" type="button" >REGISTRAR PRODUCTOS</button>
+                        <button onclick="btnMostrarProductoBlock(),  btnImagenFooterNone(), btnProductosNone()" id="productosMostrar" type="button" >MOSTRAR PRODUCTOS</button>
+                        <button onclick="btnProductosNone(), btnContainerMenu1Block()" id="productosSalir" type="button" >SALIR</button>
+                        
+                    </div>
+                    
+            </main>
+
+        </div>
+        <div id="containerProductosRegistrar">
+
+            <main>
+        
+                <h1>REGISTRAR PRODUCTOS</h1>
+                    <div class="opcionesProducto" id="opcionesProducto">
+                        
+                        <input id="nombreProducto" placeholder="Nombre" type="text">
+                        <input id="descripcionProducto" placeholder="Descripcion" type="text">
+                        <input id="cantidadProducto" placeholder="Cantidad" type="text">
+                        <input id="valorUnitarioProducto" placeholder="Valor Unitario" type="text">
+                        
+                            <div>
+                            <button id="opcionesProductosRegistrar" type="button" >Registrar</button>
+                            <button onclick="btnRegistrarProductoNone(), btnImagenFooterBlock(), btnProductosBlock()" id="opcionesProductosSalir" type="button" >SALIR</button>
+                            </div>
+                    </div>
+                    
+            </main>
+        </div>
+    
+    <div id="containerProductosMostrar">
+
+        <main id="informacionProductos">
+        
+            <h1>PRODUCTOS INGRESADOS</h1>
+            
+            <div id="productosIngresados">
+                
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Valor Unitario</th>
+                        <th>valor Total</th>
+                        
+            
+                      </tr>
+                    </thead>
+                    
+                    
+                    <tbody id="tbodyProductos">
+                        <tr>
+                          
+        
+                        </tr>
+                         
+                     
+                    </tbody>
+                   
+                    
+                  </table>
+            </div>
+    
+    
+            <button onclick="btnMostrarProductoNone(), btnImagenFooterBlock(),btnProductosBlock()" id="salirMostrar" type="button">SALIR</button>
+        </main>
+    </div>
+    <div id="containerClientes">
+
+        <main>
+        
+            <h1>CLIENTES</h1>
+                <div id="menu1">
+                    
+                    <button onclick="btnRegistrarClienteBlock(), btnImagenFooterNone(), btnClientesNone()" id="clienteRegistrar" type="button" >REGISTRAR CLIENTES</button>
+                    <button onclick="btnMostrarClientesBlock(),  btnImagenFooterNone(), btnClientesNone()" id="clienteMostrar" type="button">MOSTRAR CLIENTES</button>
+                    <button onclick="btnClientesNone(), btnContainerMenu1Block()" id="clienteSalir" type="button">SALIR</button>
+                    
+                </div>
+                
+        </main>
+    </div>
+    <div id="containerClientesRegistrar">
+
+        <main>
+        
+            <h1>REGISTRAR CLIENTES</h1>
+                <div id="opcionesClientes">
+                    
+                    <input id="nombreCliente" placeholder="Nombre" type="text">
+                    <input id="telefonoCliente" placeholder="Teléfono" type="text">
+                    <input id="direccionCliente" placeholder="Dirección" type="text">
+                    <input id="correoCliente" placeholder="Correo" type="text">
+                        <div>
+                        <button id="opcionesClientesRegistrar" type="button" >Registrar</button>
+                        <button onclick="btnRegistrarClienteNone(), btnImagenFooterBlock(), btnClientesBlock()" id="opcionesClientesSalir" type="button" >SALIR</button>
+                        </div>
+                </div>
+                
+        </main>
+    </div>
+    <div id="containerClientesMostrar">
+
+        <main id="informacionClientes">
+        
+            <h1>CLIENTES INGRESADOS</h1>
+            <div id="clientesIngresados">
+                
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>Correo</th>
+    
+                      </tr>
+                    </thead>
+                    
+                    <tbody id="tbodyClientes">
+                      <tr>
+                        <td>john</td>
+                        <td>310</td>
+                        <td>carrera</td>
+                        <td>@john</td>
+                
+    
+                      </tr>
+                      
+                    </tbody>
+                    
+                  </table>
+            </div>
+    
+    
+            <button onclick="btnMostrarClientesNone(), btnImagenFooterBlock(),btnClientesBlock()" id="salirMostrar" type="button">SALIR</button>
+        </main>
+    </div>
+    <div id="containerProveedores">
+
+        <main>
+        
+            <h1>PROVEEDORES</h1>
+                <div id="menu1">
+                    
+                    <button onclick="btnRegistrarProveedorBlock(), btnImagenFooterNone(), btnProveedoresNone()" id="proveedorRegistrar" type="button">REGISTRAR PROVEEDORES</button>
+                    <button onclick="btnMostrarProveedoresBlock(), btnImagenFooterNone(), btnProveedoresNone()" id="proveedorMostrar" type="button" >MOSTRAR PROVEEDORES</button>
+                    <button onclick="btnProveedoresNone(), btnContainerMenu1Block()" id="proveedorSalir" type="button" >SALIR</button>
+                    
+                </div>
+                
+        </main>
+    </div>
+    <div id="containerProveedoresRegistrar">
+
+        <main>
+        
+            <h1>REGISTRAR PROVEEDORES</h1>
+                <div id="opcionesProveedores">
+                    
+                    <input id="nombreProveedor" placeholder="Nombre" type="text">
+                    <input id="nitProveedor" placeholder="Nit" type="text">
+                    <input id="direccionProveedor" placeholder="Dirección" type="text">
+                    <input id="telefonoProveedor" placeholder="Teléfono" type="text">
+                        <div>
+                        <button id="opcionesProveedorRegistrar" type="button" >Registrar</button>
+                        <button onclick="btnRegistrarProveedorNone(), btnImagenFooterBlock(), btnProveedoresBlock()" id="opcionesProveedorSalir" type="button" >SALIR</button>
+                        </div>
+                </div>
+                
+        </main>
+    
+    </div>
+    <div id="containerProveedoresMostrar">
+
+        <main id="informacionProveedores">
+        
+            <h1>PROVEEDORES INGRESADOS</h1>
+            <div id="proveedoresIngresados">
+                
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Nit</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        
+                        
+            
+                      </tr>
+                    </thead>
+                    
+                    <tbody id="tbodyProveedores">
+                      <tr>
+                        
+    
+                      </tr>
+                      
+                    </tbody>
+                    
+                  </table>
+            </div>
+    
+    
+            <button onclick="btnMostrarProveedoresNone(), btnImagenFooterBlock(), btnProveedoresBlock()" id="salirMostrar" type="button">SALIR</button>
+        </main>
+    
+    </div>
+    <div id="containerRegistroTotal">
+
+        <main id="informacionTotal">
+        
+            <h1>REGISTRO TOTAL</h1>
+            <br>
+            <h1>PRODUCTOS INGRESADOS</h1>
+            <div id="productosIngresados">
+                
+              <table>
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Descripción</th>
+                      <th>Cantidad</th>
+                      <th>Valor Unitario</th>
+                      <th>valor Total</th>
+                      
+          
+                    </tr>
+                  </thead>
+                  
+                  <tbody id="tbodyProductosTotal">
+                    <tr>
+                    
+    
+                    </tr>
+                      
+                  </tbody>
+                  
+                </table>
+          </div>
+          <h1>CLIENTES INGRESADOS</h1>
+            <div id="clientesIngresados">
+                
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>Correo</th>
+    
+                      </tr>
+                    </thead>
+                    
+                    <tbody id="tbodyClientesTotal">
+                      <tr>
+                       
+                      </tr>
+                      
+                      
+                    </tbody>
+                    
+                  </table>
+            </div>
+            <h1>PROVEEDORES INGRESADOS</h1>
+            <div id="proveedoresIngresados">
+                
+              <table>
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Nit</th>
+                      <th>Dirección</th>
+                      <th>Teléfono</th>
+                      
+                      
+          
+                    </tr>
+                  </thead>
+                  
+                  <tbody id="tbodyProveedoresTotal">
+                    <tr>
+                    
+    
+                    </tr>
+                    
+                  </tbody>
+                  
+                </table>
+          </div>
+          <h1>USUARIOS INGRESADOS</h1>
+            <div id="usuariosIngresados">
+                
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Usuario</th>
+                        <th>Contraseña</th>
+                        
+    
+                      </tr>
+                    </thead>
+                    
+                    <tbody id="tbodyUsuariosTotal">
+                      <tr>
+                       
+    
+                      </tr>
+                    
+                     
+                    </tbody>
+                    
+                  </table>
+            </div>
+    
+            <button onclick="btnRegistroTotalNone(), btnImagenFooterBlock(), btnContainerMenu1Block()" id="salirMostrar" type="button">SALIR</button>
+        </main>
+    
+    </div>
+        <footer >
+            <img id="imagenInferior" src="./img/footer.webp" alt="">
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
